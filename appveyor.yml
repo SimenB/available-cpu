@@ -1,0 +1,26 @@
+init:
+  - git config --global core.autocrlf true
+
+environment:
+  matrix:
+  - nodejs_version: 10
+
+# Install scripts. (runs after repo cloning)
+install:
+  - ps: Install-Product node $env:nodejs_version x64
+
+# Post-install test scripts.
+test_script:
+  # Output useful info for debugging.
+  - node --version
+  # run tests
+  - node test.js
+
+# Don't actually build.
+build: off
+
+matrix:
+  fast_finish: true
+
+cache:
+  - "%LOCALAPPDATA%\\Yarn"
