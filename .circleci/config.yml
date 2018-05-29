@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Test
-          command: node test..js
+          command: node test.js
 
 workflows:
   version: 2
