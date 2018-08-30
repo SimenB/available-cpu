@@ -13,6 +13,9 @@ install:
 test_script:
   # Output useful info for debugging.
   - node --version
+  - yarn --version
+  # Install deps
+  - yarn
   # run tests
   - node test.js
 

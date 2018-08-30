@@ -6,6 +6,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install
+          command: yarn
+      - run:
           name: Test
           command: node test.js
 
