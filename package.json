@@ -2,5 +2,8 @@
   "name": "available-cpu",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "physical-cpu-count": "^2.0.0"
+  }
 }
