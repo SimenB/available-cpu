@@ -1,0 +1,23 @@
+name: Node CI
+
+on: ['push', 'pull_request']
+
+jobs:
+  test:
+    name: On ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macOS-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: v12.x
+      - name: install
+        run: yarn
+      - name: run check
+        run: node test.js

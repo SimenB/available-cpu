@@ -6,9 +6,12 @@ This project tries to find a safe cross-platform way of determining how many phy
 
 Results from running on different CIs are:
 
-| CI             | `cpus().length` | `physical-cpu-count` | manual with `nproc`/`sysctl`/env |
-| -------------- | --------------- | -------------------- | -------------------------------- |
-| travis (linux) | 32              | 16                   | 2                                |
-| travis (mac)   | 2               | 2                    | 2                                |
-| Circle         | 32              | 16                   | 32                               |
-| Appveyor       | 2               | 1                    | 2                                |
+| CI                       | `cpus().length` | `physical-cpu-count` | manual with `nproc`/`sysctl`/env |
+| ------------------------ | --------------- | -------------------- | -------------------------------- |
+| travis (linux)           | 32              | 16                   | 2                                |
+| travis (mac)             | 2               | 2                    | 2                                |
+| Circle                   | 32              | 16                   | 32                               |
+| Appveyor                 | 2               | 1                    | 2                                |
+| GitHub Actions (linux)   | 2               | 2                    | 2                                |
+| GitHub Actions (mac)     | 4               | 4                    | 4                                |
+| GitHub Actions (windows) | 2               | 1                    | 2                                |
