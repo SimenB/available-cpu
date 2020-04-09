@@ -1,0 +1,39 @@
+jobs:
+  - job: Linux
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '12.x'
+        displayName: 'Install Node.js'
+      - script: yarn install
+        displayName: 'yarn install'
+      - script: node test.js
+        displayName: 'test'
+
+  - job: Windows
+    pool:
+      vmImage: vs2017-win2016
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '12.x'
+        displayName: 'Install Node.js'
+      - script: yarn install
+        displayName: 'yarn install'
+      - script: node test.js
+        displayName: 'test'
+
+  - job: macOS
+    pool:
+      vmImage: macos-10.15
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '12.x'
+        displayName: 'Install Node.js'
+      - script: yarn install
+        displayName: 'yarn install'
+      - script: node test.js
+        displayName: 'test'
