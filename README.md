@@ -10,6 +10,7 @@ Results from running on different CIs are:
 | ------------------------- | --------------- | -------------------- | -------------------------------- |
 | travis (linux)            | 32              | 16                   | 2                                |
 | travis (mac)              | 2               | 2                    | 2                                |
+| travis (windows)          | 2               | 1                    | 2                                |
 | Circle                    | 32              | 16                   | 32                               |
 | Appveyor                  | 2               | 1                    | 2                                |
 | GitHub Actions (linux)    | 2               | 2                    | 2                                |

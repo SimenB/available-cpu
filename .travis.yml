@@ -3,4 +3,5 @@ node_js: node
 os:
   - linux
   - osx
+  - windows
 script: node test.js
